@@ -13,7 +13,7 @@ const About = () => {
 				</label>
 				<div className="px-5">
 					<div>
-						<h1 className=" text-2xl font-bold ">abudl quyum</h1>
+						<h1 className=" text-2xl font-bold ">Abdul Quayum</h1>
 					</div>
 					<div className="flex">
 						<h1 className="text-slate-300">
@@ -26,14 +26,7 @@ const About = () => {
 			<div className="flex bg-black mt-5 justify-evenly rounded-lg   items-center  bg-slate-300 p-3">
 				<div>
 					<h1>
-						<span className="text-2xl font-bold  ">75</span>{" "}
-						<span className="text-gray-500 font-semibold  ">kg</span>
-					</h1>
-					<h1>Weidth</h1>
-				</div>
-				<div>
-					<h1>
-						<span className="text-2xl font-bold  ">75</span>{" "}
+						<span className="text-2xl font-bold  ">75</span>
 						<span className="text-gray-500 font-semibold  ">kg</span>
 					</h1>
 					<h1>Weidth</h1>
@@ -45,6 +38,16 @@ const About = () => {
 					</h1>
 					<h1>Weidth</h1>
 				</div>
+				<div>
+					<h1>
+						<span className="text-2xl font-bold  ">75</span>
+						<span className="text-gray-500 font-semibold  ">kg</span>
+					</h1>
+					<h1>Weidth</h1>
+				</div>
+			</div>
+			<div className="mt-5">
+				<h1 className="text-gray-600 text-xl font-semibold">Add A Break</h1>
 			</div>
 		</div>
 	);
