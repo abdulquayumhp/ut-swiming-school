@@ -1,25 +1,30 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import Card from "../Cards/Card";
+import Navbar from "../Navbar/Navbar";
+import UpdatedCart from "../UpdatedCart/UpdatedCart";
 
 const Header = () => {
+	const [splayer, setSplayer] = useState([]);
+
+	useEffect(() => {
+		fetch(`swimming.json`)
+			.then(res => res.json())
+			.then(data => setSplayer(data));
+	}, []);
+	// console.log(splayer);
 	return (
-		<div className=" p-2  md:w-9/12 mx-auto">
-			<div className=" md:w-3/5 pt-20 flex items-center ">
-				<div>
-					<img
-						className="w-20 md:w-40 pe-20"
-						src="https://www.nicepng.com/png/full/222-2228188_adult-swim-logo-png-download-swimming-logo.png"
-						alt=""
-					/>
-				</div>
-				<div>
-					<h1 className=" text-2xl md:text-5xl max-w-md ">
-						Ut <span className="text-sky-400">SWIM</span> <span>SCHOOL</span>
-					</h1>
+		<div className="flex">
+			<div className=" p-2 md:w-8/12 mx-auto ">
+				<Navbar />
+				<div className="grid grid-cols-1   md:grid-cols-1 lg:grid-cols-2 gap-20">
+					{splayer.map(player => (
+						<Card player={player} key={player._id} />
+					))}
 				</div>
 			</div>
-			<h1 className="text-2xl pt-10 font-bold text-zinc-500">
-				Select your Daily category
-			</h1>
+			<div className=" bg-zinc-200 p-10 w-96 h-screen ">
+				<UpdatedCart />
+			</div>
 		</div>
 	);
 };
