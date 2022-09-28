@@ -13,16 +13,16 @@ const Header = () => {
 	}, []);
 	// console.log(splayer);
 	return (
-		<div className="flex">
+		<div className="flex  flex-col-reverse md:flex-row ">
 			<div className=" p-2 md:w-8/12 mx-auto ">
 				<Navbar />
-				<div className="grid grid-cols-1   md:grid-cols-1 lg:grid-cols-2 gap-20">
+				<div className="grid grid-cols-1   md:grid-cols-2 lg:grid-cols-3 gap-20">
 					{splayer.map(player => (
 						<Card player={player} key={player._id} />
 					))}
 				</div>
 			</div>
-			<div className=" bg-zinc-200 p-10 w-96 h-screen ">
+			<div className=" bg-zinc-200 p-10 w-full md:w-96  h-screen ">
 				<UpdatedCart />
 			</div>
 		</div>
