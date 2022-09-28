@@ -7,7 +7,7 @@ const Header = () => {
 	const [splayer, setSplayer] = useState([]);
 
 	const [cart, setCart] = useState(0);
-	console.log(cart);
+	// console.log(cart);
 
 	useEffect(() => {
 		fetch(`swimming.json`)
@@ -16,7 +16,9 @@ const Header = () => {
 	}, []);
 	// console.log(splayer);
 
-	const addToCartBtn = player => {};
+	const addToCartBtn = player => {
+		setCart(player.time + cart);
+	};
 
 	return (
 		<div className="flex  flex-col-reverse md:flex-row ">
@@ -33,7 +35,7 @@ const Header = () => {
 				</div>
 			</div>
 			<div className=" bg-zinc-200 p-10 w-full md:w-96  h-screen ">
-				<UpdatedCart />
+				<UpdatedCart cart={cart} />
 			</div>
 		</div>
 	);
