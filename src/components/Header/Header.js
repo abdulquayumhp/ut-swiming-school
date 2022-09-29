@@ -3,6 +3,8 @@ import Card from "../Cards/Card";
 import Navbar from "../Navbar/Navbar";
 import UpdatedCart from "../UpdatedCart/UpdatedCart";
 
+import "./Header.css";
+
 const Header = () => {
 	const [splayer, setSplayer] = useState([]);
 
@@ -22,9 +24,9 @@ const Header = () => {
 
 	return (
 		<div className="flex  flex-col-reverse md:flex-row ">
-			<div className=" p-2 md:w-8/12 mx-auto ">
+			<div className=" p-2 md:w-9/12 mx-auto ">
 				<Navbar />
-				<div className="grid grid-cols-1   md:grid-cols-2 lg:grid-cols-3 gap-20">
+				<div className="one-cart">
 					{splayer.map(player => (
 						<Card
 							player={player}

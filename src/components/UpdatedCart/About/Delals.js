@@ -1,40 +1,60 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import Swal from "sweetalert2";
 
 const Delals = ({ cart }) => {
-	const [secound, setSecound] = useState(0);
+	const [data, setData] = useState("");
 
-	const locaStorageSet = secound => {
-		localStorage.setItem("value", secound);
+	useEffect(() => {
+		fetch(`Swimming.json`)
+			.then(res => res.json())
+			.then(data => setData(data));
+	}, [data]);
+
+	const setDataLocalStorage = e => {
+		localStorage.setItem("value", e);
 	};
-	const localStorageGetItem = localStorage.getItem("value");
 
+	const setTost = () => {
+		Swal.fire("Good job!", "You clicked the button!", "success");
+	};
+	const box = localStorage.getItem("value");
 	return (
 		<div>
 			<div>
 				<div className=" mt-4 bg-slate-400 p-5 rounded-lg flex justify-evenly items-center">
 					<div className="bg-slate-500 rounded-2xl p-1 text-white">
 						<button>
-							<span onClick={e => setSecound(e.target.innerText)}>10s</span>
+							<span onClick={e => setDataLocalStorage(e.target.innerText)}>
+								10
+							</span>
 						</button>
 					</div>
 					<div className="bg-slate-500 rounded-2xl p-1 text-white">
 						<button>
-							<span onClick={e => setSecound(e.target.innerText)}>20s</span>
+							<span onClick={e => setDataLocalStorage(e.target.innerText)}>
+								20
+							</span>
 						</button>
 					</div>
 					<div className="bg-slate-500 rounded-2xl p-1 text-white">
 						<button>
-							<span onClick={e => setSecound(e.target.innerText)}>30s</span>
+							<span onClick={e => setDataLocalStorage(e.target.innerText)}>
+								30
+							</span>
 						</button>
 					</div>
 					<div className="bg-slate-500 rounded-2xl p-1 text-white">
 						<button>
-							<span onClick={e => setSecound(e.target.innerText)}>40s</span>
+							<span onClick={e => setDataLocalStorage(e.target.innerText)}>
+								40
+							</span>
 						</button>
 					</div>
 					<div className="bg-slate-500 rounded-2xl p-1 text-white">
 						<button>
-							<span onClick={e => setSecound(e.target.innerText)}>50s</span>
+							<span onClick={e => setDataLocalStorage(e.target.innerText)}>
+								50
+							</span>
 						</button>
 					</div>
 				</div>
@@ -53,13 +73,15 @@ const Delals = ({ cart }) => {
 					<h1 className=" text-xl ">
 						Break Time
 						<span className=" text-base px-10 text-slate-100 ">
-							{localStorageGetItem}{" "}
-							<span className="Secound text-cyan-500">Secound</span>
+							{box}
+							<span className="Secound text-cyan-500"> Secound</span>
 						</span>
 					</h1>
 				</div>
 				<div className="text-center mt-8">
-					<button className="btn btn-primary px-14">Acticity Completed</button>
+					<button onClick={setTost} className="btn btn-primary px-14">
+						Acticity Completed
+					</button>
 				</div>
 			</div>
 		</div>
