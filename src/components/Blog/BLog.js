@@ -7,6 +7,9 @@ const BLog = () => {
 				Question
 			</h1>
 			<div className=" p-10 bg-gray-300 rounded-lg mb-5">
+				<h1 className="text-black font-bold ">
+					2. what is the Main difference between props and state ?{" "}
+				</h1>
 				<h1>1. How React Work ? </h1>
 				<p className="mt-2">
 					ReactJS divides the UI into isolated reusable pieces of code known as
@@ -16,7 +19,9 @@ const BLog = () => {
 				</p>
 			</div>
 			<div className=" p-10 bg-gray-300 rounded-lg mb-5">
-				<h1>2. what is the Main difference between props and state ? </h1>
+				<h1 className="text-black font-bold ">
+					2. what is the Main difference between props and state ?{" "}
+				</h1>
 				<p className="mt-2">
 					The state is an updatable structure that is used to contain data or
 					information about the component and can change over time. The change
@@ -38,15 +43,26 @@ const BLog = () => {
 				</p>
 			</div>
 			<div className=" p-10 bg-gray-300 rounded-lg mb-5">
-				<h1>3. what is exactly useeffect work except api call ? </h1>
+				<h1 className="text-black font-bold ">
+					3. what is exactly useeffect work except api call ?{" "}
+				</h1>
 				<p className="mt-2">
-					<p>What does useEffect do?</p>
+					<p className="">What does useEffect do?</p>
 					By using this Hook, you tell React that your component needs to do
 					something after render. React will remember the function you passed
 					(we'll refer to it as our “effect”), and call it later after
 					performing the DOM updates. In this effect, we set the document title,
 					but we could also perform data fetching or call some other imperative
 					API
+				</p>
+				<p className="underline py-2 text-semibold text-xl">useEffect work </p>
+				<p>
+					1.The useEffect Hook allows you to perform side effects in your
+					components. <br /> 2.Some examples of side effects are :
+					<span className=" text-xl text-cyan-700  ">
+						fetching data, directly updating the DOM, and timers
+					</span>
+					.
 				</p>
 			</div>
 		</div>
