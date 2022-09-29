@@ -5,13 +5,13 @@ const Card = ({ player, addToCartBtn }) => {
 	// console.log(player);
 
 	return (
-		<div className=" mx-auto  mt-10 w-80   ">
-			<div className="card h-full bg-base-100 shadow-xl  ">
-				<figure className="px-10   pt-10">
+		<div className=" mx-auto  mt-10 w-full md:w-80   ">
+			<div className="card h-full  bg-base-100 shadow-xl  ">
+				<figure className="md:px-10 px-5 pt-5 md:pt-10">
 					<img
 						src={picture}
 						alt="Shoes"
-						className="rounded-xl w-56 h-40 object-cover  "
+						className="rounded-xl w-96 h-56   md:w-56 md:h-40 object-cover  "
 					/>
 				</figure>
 				<div className="card-body   mb-5">
@@ -29,7 +29,7 @@ const Card = ({ player, addToCartBtn }) => {
 						<div className=" ">
 							<button
 								onClick={() => addToCartBtn(player)}
-								className="btn btn-primary px-20">
+								className="btn btn-primary  px-20">
 								add to cart
 							</button>
 						</div>

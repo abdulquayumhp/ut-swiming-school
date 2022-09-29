@@ -7,10 +7,7 @@ const BLog = () => {
 				Question
 			</h1>
 			<div className=" p-10 bg-gray-300 rounded-lg mb-5">
-				<h1 className="text-black font-bold ">
-					2. what is the Main difference between props and state ?{" "}
-				</h1>
-				<h1>1. How React Work ? </h1>
+				<h1 className="text-black font-bold">1. How React Work ? </h1>
 				<p className="mt-2">
 					ReactJS divides the UI into isolated reusable pieces of code known as
 					components. React components work similarly to JavaScript functions as

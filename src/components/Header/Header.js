@@ -25,8 +25,8 @@ const Header = () => {
 
 	return (
 		<div>
-			<div className="flex  flex-col-reverse md:flex-row ">
-				<div className=" p-2 md:w-9/12 mx-auto ">
+			<div className="flex  flex-col-reverse md:flex-row md:ml-5 ">
+				<div className=" p-2 md:w-9/12 mx-auto  ">
 					<Navbar />
 					<div className="one-cart">
 						{splayer.map(player => (

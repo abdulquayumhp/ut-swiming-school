@@ -26,24 +26,24 @@ const About = () => {
 			<div className="flex bg-black mt-5 justify-evenly rounded-lg   items-center  bg-slate-300 p-3">
 				<div>
 					<h1>
-						<span className="text-2xl font-bold  ">75</span>
-						<span className="text-gray-500 font-semibold  ">kg</span>
+						<span className="text-2xl font-bold  ">8 </span>
+						<span className="text-gray-500 font-semibold  ">Gold</span>
 					</h1>
-					<h1>Weidth</h1>
+					<h1>Medel</h1>
 				</div>
 				<div>
 					<h1>
-						<span className="text-2xl font-bold  ">75</span>
-						<span className="text-gray-500 font-semibold  ">kg</span>
+						<span className="text-2xl font-bold  ">25</span>
+						<span className="text-gray-500 font-semibold  ">Silver</span>
 					</h1>
-					<h1>Weidth</h1>
+					<h1>Medel</h1>
 				</div>
 				<div>
 					<h1>
-						<span className="text-2xl font-bold  ">75</span>
-						<span className="text-gray-500 font-semibold  ">kg</span>
+						<span className="text-2xl font-bold  ">52</span>
+						<span className="text-gray-500 font-semibold  ">Bronze</span>
 					</h1>
-					<h1>Weidth</h1>
+					<h1>Medel</h1>
 				</div>
 			</div>
 			<div className="mt-5">

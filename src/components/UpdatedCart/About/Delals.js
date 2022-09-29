@@ -4,13 +4,10 @@ import Swal from "sweetalert2";
 const Delals = ({ cart }) => {
 	const [data, setData] = useState("");
 
-	useEffect(() => {
-		fetch(`Swimming.json`)
-			.then(res => res.json())
-			.then(data => setData(data));
-	}, [data]);
+	useEffect(() => {}, [data]);
 
 	const setDataLocalStorage = e => {
+		setData(e);
 		localStorage.setItem("value", e);
 	};
 
