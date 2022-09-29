@@ -22,35 +22,35 @@ const Delals = ({ cart }) => {
 		<div>
 			<div>
 				<div className=" mt-4 bg-slate-400 p-5 rounded-lg flex justify-evenly items-center">
-					<div className="bg-slate-500 rounded-2xl p-1 text-white">
+					<div className="bg-slate-500 rounded-2xl px-2 py-1 text-white">
 						<button>
 							<span onClick={e => setDataLocalStorage(e.target.innerText)}>
 								10
 							</span>
 						</button>
 					</div>
-					<div className="bg-slate-500 rounded-2xl p-1 text-white">
+					<div className="bg-slate-500 rounded-2xl  px-2 py-1 text-white">
 						<button>
 							<span onClick={e => setDataLocalStorage(e.target.innerText)}>
 								20
 							</span>
 						</button>
 					</div>
-					<div className="bg-slate-500 rounded-2xl p-1 text-white">
+					<div className="bg-slate-500 rounded-2xl px-2 py-1 text-white">
 						<button>
 							<span onClick={e => setDataLocalStorage(e.target.innerText)}>
 								30
 							</span>
 						</button>
 					</div>
-					<div className="bg-slate-500 rounded-2xl p-1 text-white">
+					<div className="bg-slate-500 rounded-2xl px-2 py-1 text-white">
 						<button>
 							<span onClick={e => setDataLocalStorage(e.target.innerText)}>
 								40
 							</span>
 						</button>
 					</div>
-					<div className="bg-slate-500 rounded-2xl p-1 text-white">
+					<div className="bg-slate-500 rounded-2xl px-2 py-1 text-white">
 						<button>
 							<span onClick={e => setDataLocalStorage(e.target.innerText)}>
 								50
