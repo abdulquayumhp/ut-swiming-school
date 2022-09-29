@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import BLog from "../Blog/BLog";
 import Card from "../Cards/Card";
 import Navbar from "../Navbar/Navbar";
 import UpdatedCart from "../UpdatedCart/UpdatedCart";
@@ -23,21 +24,26 @@ const Header = () => {
 	};
 
 	return (
-		<div className="flex  flex-col-reverse md:flex-row ">
-			<div className=" p-2 md:w-9/12 mx-auto ">
-				<Navbar />
-				<div className="one-cart">
-					{splayer.map(player => (
-						<Card
-							player={player}
-							key={player._id}
-							addToCartBtn={addToCartBtn}
-						/>
-					))}
+		<div>
+			<div className="flex  flex-col-reverse md:flex-row ">
+				<div className=" p-2 md:w-9/12 mx-auto ">
+					<Navbar />
+					<div className="one-cart">
+						{splayer.map(player => (
+							<Card
+								player={player}
+								key={player._id}
+								addToCartBtn={addToCartBtn}
+							/>
+						))}
+					</div>
+				</div>
+				<div className=" bg-zinc-200 p-10 w-full md:w-96  h-screen ">
+					<UpdatedCart cart={cart} />
 				</div>
 			</div>
-			<div className=" bg-zinc-200 p-10 w-full md:w-96  h-screen ">
-				<UpdatedCart cart={cart} />
+			<div>
+				<BLog />
 			</div>
 		</div>
 	);
